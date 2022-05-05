@@ -8,12 +8,12 @@ myButton.addEventListener('click', requests.testing);
 
 // requests.testing();
 
-requests.getLuke()
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+// requests.getLuke()
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error));
 
 let user = 'soule222';
 
+user = 'bertw82'
+
 requests.getUser(user)
-    .then(response => requests.showResults(response))
-    .catch(error => console.log(error));
