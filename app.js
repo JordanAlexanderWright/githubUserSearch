@@ -2,7 +2,7 @@ const myButton = document.querySelector('.testing'),
     resultsDisplay = document.querySelector('.searchResults'),
     userInput = document.querySelector('#userInput');
 
-requests = new RequestHandler
+const requests = new RequestHandler('githubtoken.txt');
 
 myButton.addEventListener('click', requests.testing);
 

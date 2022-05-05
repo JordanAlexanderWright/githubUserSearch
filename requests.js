@@ -1,11 +1,30 @@
 class RequestHandler {
-  
+
+    constructor(keyDocument){
+        this.getKey(keyDocument);
+    }
+
+    async getKey(document){
+
+        console.log('hello')
+        let promise = await fetch(document);
+
+        let promiseText = await promise.text().then(text => {
+            this.setAPIKey(text)})
+            .catch(error => console.log(error));  
+    }
+
+    setAPIKey(key){
+        this.apiKey = key
+        console.log(this.apiKey)
+    }
+
     async getLuke() {
 
         let promise = await fetch('https://swapi.dev/api/people/1/');
         let answer = await promise.json();
 
-        return answer
+        return answer;
     }
 
     testing(){
@@ -19,7 +38,7 @@ class RequestHandler {
     async getUser(user) {
         let promise = await fetch(`https://api.github.com/users/${user}`, {
             headers: {
-                authorization: 'token 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'
+                authorization: this.apiKey
             }
         })
         
