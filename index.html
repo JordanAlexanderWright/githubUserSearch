@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>I suck</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+
+        <div class="header">
+            <span id="title">GitHub User Finder</span>
+        </div>
+
+       <div class="container">
+           <span class="searchLabel">Search Github Users</span>
+           <span class="details">Enter a username to fetch a users profile info and repos</span>
+            <form id="userForm">
+                <input type="text" id='userInput' placeholder="Github Username..." autofocus>
+                <input type="button" class="testing" value="Hit me">
+            </form>
+
+            <hr>
+
+            <div class="results">
+                <div id="profilePicture"></div>
+                <ul class="searchResults"></ul>
+            </div>
+
+       </div>
+
+    </div>
+        <script src="requests.js"></script>
+        <script src="app.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,71 @@
+.header {
+    background-color: lightblue;
+    width:auto;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-color: black;
+    border: 2px solid;
+    padding-left: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden;
+    border-radius: 5px;
+    border-style: outset;
+    box-shadow: inset;
+}
+
+    .searchLabel {
+        grid-row-start:1;
+        font-size: 25px;
+    }
+
+    .details {
+        grid-row-start:2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        font-size: 13px;
+        color: red;
+    }
+
+    #userForm {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        padding: 10px 0px;
+        box-sizing: border-box;
+    }
+
+    #userInput {
+        width: 90%;
+    }
+
+    .results {
+        grid-row-start: 4;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /* grid-column-start: 1;
+        grid-column-end: 4; */
+    }
+
+    #profilePicture{
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 1em;
+        border: 1px solid blue;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+
+    #profilePicture img {
+        visibility: visible; /*hidden but reserve the space*/
+        width: 100px;
+        height: 100px;
+        border-color:red;
+        border-style:double;
+    }
