@@ -66,6 +66,7 @@ class RequestHandler {
             
             profilePic.src = `${avatarUrl}.png`;
             profilePic.alt = 'Profile Picture';
+            profilePic.id = 'avatar'
 
             document.querySelector('#profilePicture').appendChild(profilePic);
 
