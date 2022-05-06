@@ -4,7 +4,7 @@ const myButton = document.querySelector('.testing'),
 
 const requests = new RequestHandler('githubtoken.txt');
 
-// myButton.addEventListener('click', showChildren);
+
 userInput.addEventListener('keyup', userHandling);
 
 function userHandling(){
@@ -17,7 +17,14 @@ function userHandling(){
             resultsDisplay.children[0].remove();
         }
 
-        document.querySelector('#avatar').remove();
+        // avatar should only ever have on, but 
+        // a bug happens when keystrokes are pressed too quickly. SO removing all. 
+        
+        loopCount = profilePicture.childElementCount;
+
+        for(let x = 0; x < loopCount; x++){
+            document.querySelector('#avatar').remove();
+        }
 
     } catch {
         console.log(`Probably didn't exist yet`);

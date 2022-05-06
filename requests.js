@@ -79,8 +79,10 @@ class RequestHandler {
                     let listItem = document.createElement('li');
                     let link = document.createElement('a');
 
+                    // Creating the link. target will make the link open in a new tab. 
                     link.innerHTML = datapoint;
                     link.href = datapoint;
+                    link.target = '_blank'
 
                     listItem.appendChild(link)
                     resultsDisplay.appendChild(listItem);
