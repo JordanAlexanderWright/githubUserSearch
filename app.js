@@ -17,7 +17,7 @@ function userHandling(){
             resultsDisplay.children[0].remove();
         }
 
-        // avatar should only ever have on, but 
+        // avatar should only ever have one, but 
         // a bug happens when keystrokes are pressed too quickly. SO removing all. 
         
         loopCount = profilePicture.childElementCount;
@@ -34,15 +34,3 @@ function userHandling(){
     requests.getUser(input)
     console.log(input);
 }
-
-// requests.testing();
-
-// requests.getLuke()
-//     .then(data => console.log(data))
-//     .catch(error => console.log(error));
-
-// let user = 'soule222';
-
-// user = 'bertw82'
-
-// requests.getUser(user)

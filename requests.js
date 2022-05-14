@@ -1,44 +1,25 @@
 class RequestHandler {
 
-    // The class takes one parameter, A link to a text file with the users github api key
-    constructor(keyDocument){
-        this.getKey(keyDocument);
+    constructor(apiDoc) {
+        this.apiDoc = apiDoc
     }
+    async getKey(){
 
-    async getKey(document){
+        let promise = await fetch(this.apiDoc);
 
-        let promise = await fetch(document);
-
-        await promise.text().then(text => {
-            this.setAPIKey(text)})
+        await promise.text().then(text => {return text})
             .catch(error => console.log(error));  
-    }
-
-    setAPIKey(key){
-        this.apiKey = key
-    }
-
-    async getLuke() {
-
-        let promise = await fetch('https://swapi.dev/api/people/1/');
-        let answer = await promise.json();
-
-        return answer;
     }
 
     testing(){
         console.log('you are an idiot');
     }
 
-    handleLuke(something) {
-        console.log('working');
-    }
-
     async getUser(user) {
         
         let promise = await fetch(`https://api.github.com/users/${user}`, {
             headers: {
-                authorization: this.apiKey
+                authorization: this.getKey()
             }
             })
     

@@ -1,8 +1,9 @@
 .header {
     background-color: lightblue;
     width:auto;
-    margin-left: 0;
-    padding-left: 0;
+    margin-left: 10%;
+    padding-left: 10%;
+    margin-right: 10%;
     text-align: center;
 }
 
@@ -57,7 +58,6 @@
         background-repeat: no-repeat;
         background-size: contain;
         border-radius: 1em;
-        border: 1px solid blue;
         grid-column-start:1;
         grid-column-end: 2;
     }
@@ -66,6 +66,6 @@
         visibility: visible; /*hidden but reserve the space*/
         width: 100px;
         height: 100px;
-        border-color:red;
-        border-style:double;
+        border-radius: 1em;
+        border-style: solid;
     }
